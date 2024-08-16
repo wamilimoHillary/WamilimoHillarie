@@ -1,0 +1,94 @@
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 96%;
+        height: 90%;
+        background:#785353;
+        padding-top: 60px;
+        z-index: 1;
+        box-shadow: none;
+        border-radius:0;
+            }
+
+
+    .nav.show {
+        display: flex;
+    }
+    .toggle-darkmode {
+        top: auto;
+        bottom: 20px;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 1000;
+    }
+    .nav a {
+        padding: 10px 20px;
+        border-bottom: 1px solid  rgb(255, 116, 9);
+    }
+
+    .typing-container,.header_image{
+    flex: 100%;
+}
+
+/*socialmedia icons images */
+.social-media-bar img {
+    width: 70%;
+    }
+
+    details{
+        flex: 100%; /* Stack vertically on small screens */
+        margin-bottom: 5px !important;
+        }
+        summary{
+            font-size: small;
+        }
+
+    .team-section figure{
+        flex: 1 1 100%; /* Stack vertically on small screens */
+    }
+
+    h4{
+        font-size: 12px;
+    }
+
+    /*cv button */
+.cv-button{
+    top: 75%; 
+    left: 5%;
+    padding:8px;      
+}
+
+    /*--Animations section*/
+  .profile-picture{
+    width: 100%;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 1024px) {
+    
+    .team-section figure,details {
+        flex: 1 1 45%; /* Two in a row on tablets */
+        margin-bottom: 5rem;
+    }
+
+        /*--Animations section*/
+  .profile-picture{
+    width: 100%;
+    margin: auto;
+  }
+
+  /*MY SLIDES PICTURE*/
+.myslide img{
+    width: 70%;
+    height:200px;
+    margin: auto;
+}
+}

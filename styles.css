@@ -1,0 +1,538 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/*all links */
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button:hover,a:hover{
+    opacity: 0.5;
+}
+
+.header {
+    align-items: center;
+    background: #785353;
+    padding: 1px 20px;
+    position: relative;
+    color: #fff;
+    background: url(images/wamilimo1.jpg);
+    background-size: cover;
+    animation: header-background 15s ease-out 4s infinite;
+}
+
+@keyframes header-background {
+    10%{background:url(images/NIKE.jpg);background-position: 100% 30%; }
+    50%{background:url(images/NIKE.jpg)}
+  
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    
+    border-radius: 55px;
+    box-shadow: 0 0 8px 0 rgb(245, 222, 179) inset;
+    border-bottom: 2px solid  rgb(255, 116, 9); ;
+}
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+   background:  rgb(255, 116, 9);
+   border-radius: 20px;
+   opacity: 1;
+}
+
+.nav a:active {
+    background:  rgb(255, 116, 9);
+}
+
+.nav i  {
+font-size:25px;
+margin-right:5px ;
+
+}
+
+/*heading container for typewriter and header image */
+.heading {
+display: flex;
+flex-wrap: wrap;
+margin-top: 120px;
+}
+
+.typing-container,.header_image{
+    flex: 1;
+}
+
+.intro{
+    font-size: medium; 
+    font-weight: bold;
+     font-family: 'Lobster', cursive;
+}
+
+.header_image{
+    background:url(images/js.png) no-repeat center center;
+}
+
+/*profile image*/
+.header_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.heading h1 {
+    margin: 0px 0;
+}
+
+#typing-text{
+    background: #0000006f;
+    width: fit-content;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+ 
+/* Toggle Switch Styles */
+.switch {
+position: absolute;
+top: 80px;
+right: 20px;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input {
+display: none;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+background-color:  rgb(255, 116, 9);
+border-radius: 34px;
+height: 100%;
+width: 100%;
+transition: 0.4s;
+}
+
+.slider:before {
+content: "";
+position: absolute;
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+border-radius: 50%;
+transition: 0.4s;
+}
+
+
+input:checked + .slider {
+background-color:  rgb(255, 116, 9);
+}
+
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+
+#moon,#sun{
+position: absolute;
+color: #fff;
+font-size: x-large;
+}
+
+#sun{
+left: 33px;
+top: 5px;
+}
+
+#moon{
+left: 6px;
+top: 4px;
+}
+.switch p{
+position: relative;
+top: 25px;
+font-size: x-small;
+}
+
+#typing-text {
+color:rgb(255, 111, 0) ;
+
+}
+
+/*cv button */
+.cv-button{
+    position: absolute;
+    top: 60%; 
+    left: 15%;
+    border: none;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+    background: #e65e0a;
+    color: #fff;
+}
+
+
+/* Social Media Bar */
+.social-media-bar {
+display: flex;
+justify-content: center; /* Center the icons */
+align-items: center; /* Align items vertically center */
+background: #e65e0a;
+border-top: 2px solid #fffefe;
+position: relative;
+
+height: fit-content;
+bottom: 0; /* Ensure it's at the bottom of the header */
+width:100%;
+
+}
+
+.social-media-bar a {
+text-decoration: none;
+margin: 0 5px; /* Reduced margin for closer spacing */
+width: 25%;
+}
+
+.social-media-bar a:hover {
+opacity: 0.5;
+}
+
+.social-media-bar img {
+width: 30%;
+}
+
+
+/*--Animations section*/
+
+#animation_section{
+    background: rgb(245, 222, 179);
+}
+
+  .profile-picture{
+    width: 50%;
+    height:60vh;
+    margin: auto;
+    box-shadow:  -7px 10px 5px 2px #785353 ;
+    border-radius: 50%;
+    background-image: url(images/wami4.png);
+background-repeat: no-repeat;
+background-size: contain;
+background-size:100% 100%;
+animation: home-animation 15s  3s infinite normal;/*animation shorthand property: name,duration,timing-function,delay,iteration-count,direction;*/
+}
+   
+@keyframes  home-animation {
+      0%{  background-image: url(images/wami4.png);}
+      30%  {background-image:url(images/wami5-removebg-preview.png);}
+      50%  {background-image:url(images/wami6-removebg-preview.png);}
+      80%  {background-image:url(images/wami7-removebg-preview.png);}
+      100%  {background-image:url(images/wami8-removebg-preview.png);}
+      
+    }
+
+
+/*MY SLIDES PICTURE*/
+.myslide img{
+    width: 40%;
+    height:200px;
+    margin: auto;
+}
+
+.myslide h2{
+    color: #e65e0a;
+}
+
+.learn-button{
+    border: none;
+    background: #e65e0a;
+    padding: 10px;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 10px;
+    
+}
+
+/*-------WHY ME-----*/
+.why_me,.graphics{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(245, 222, 179);
+}
+
+/*details*/
+details,.graphic_div{
+    flex: 1 1 22%;
+    margin:15px;
+        }
+
+    /*summary of content when open*/
+details[open] summary{
+    background-color: rgb(255, 116, 9);
+   
+    box-shadow: none;
+    border: none;
+}
+
+/*summary of content*/
+ summary{
+    box-shadow:0 0 1px 1px  rgb(255, 116, 9) ;
+    background:#785353;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid #fc6d15;
+    font-size: medium; 
+    font-weight: bold;
+     font-family: 'Lobster', cursive;
+    
+ }
+
+ .contents{
+    font-size: medium; 
+    font-weight:lighter;
+     font-family: 'Lobster', cursive;
+ }
+
+
+ /* #remove marker
+summary::marker{
+    content: "";
+}
+*/
+
+.graphic_div img{
+    width: 100%;
+    height: auto;
+}
+
+/*client section*/
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #785353;
+}
+
+.section_intro{
+    flex: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.team-section figure {
+    flex: 1 1 22%; /* Four in a row on large screens */
+    margin: 10px;
+    position: relative; /* To position the testimonial card */
+    text-align: center;
+    border-right: 2px solid #fff;
+}
+
+      /*client image*/
+  .project_image{
+    width: 100%;
+    height: 60%; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+ .client_image{
+  width: 30%;
+    height: 30%; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 50%;
+ }
+
+ .client_image:hover{
+    width: 100%;
+    height: 60%; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius:0;
+ }
+
+  .client_caption h2, h5{
+    color: #fc6d15;
+    font-weight: bold;
+  }
+
+  .client_caption p {
+    font-style: italic;
+    color: #fff;
+    font-weight: bolder;
+  }
+
+  .client_caption:hover,summary:hover{
+    transform: scale(0.9);
+}
+  
+  .read-btn{
+    background: #fc6406;
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    color: #ffffff;
+    width: fit-content;
+    animation: readbtn 8s infinite 3s ease-in-out ;
+  }
+
+  @keyframes readbtn{
+    0%, 100%{
+transform: scale(0);
+    }
+  10%,  20%{
+        transform: scale(1);
+    }
+   30%, 50%{
+        transform: scale(1.2);
+    }
+
+   60%, 75%{
+        transform: scale(1.5);
+    }
+
+  }
+
+  .read-btn:hover{
+    opacity: 0.5;
+  }
+
+
+.testimonial-card {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+    text-align: left;
+    font-size: medium; 
+    font-weight: bold;
+     font-family: 'Lobster', cursive;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+  /*projects section*/
+  .project_links a{
+    display: inline-block;
+    padding: 5px 10px;
+    background:#e65e0a;
+    color: #fff;
+    font-weight: bolder;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 5px;
+  }
+
+
+/* Footer Styles */
+.footer {
+    background-color:#785353;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #fc6d15;
+}
+
+.footer .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer .footer-link {
+    display: block;
+    margin-bottom: 10px;
+    color:#fc6d15;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.footer .footer-link:hover {
+    color: #fff;
+}
+
+.footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*DARKMODE STYLES*/
+.dark-mode .header{
+    background-image: url(images/NIKE.jpg);
+}
+
+.dark-mode .nav, .dark-mode footer, .dark-mode .team-section ,
+.dark-mode .why_me, .dark-mode #animation_section {
+    background:  #232222;
+    color: #fff;
+}
+
+
+ .dark-mode #animation_section figure{
+    background: transparent;
+    box-shadow: none;
+}
+
+.dark-mode figure ,.dark-mode summary{
+    background: #3c3c3cdd;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+}
