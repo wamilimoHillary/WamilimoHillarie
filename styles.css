@@ -360,6 +360,13 @@ summary::marker{
     background: #785353;
 }
 
+.fa-eye{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 35%;
+    top: 5%;
+}
+
 .section_intro{
     flex: 100%;
     text-align: center;
