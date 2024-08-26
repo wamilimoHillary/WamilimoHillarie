@@ -99,3 +99,25 @@ const menuBtn = document.getElementById('menu-btn');
         slides[slideIndex - 1].style.display = "block";  // Display current slide
         setTimeout(showSlides, 2000);  // Change slide every 2 seconds (2000 milliseconds)
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const figures = document.querySelectorAll('figure');
+    
+        function checkFigures() {
+            figures.forEach((figure, index) => {
+                const rect = figure.getBoundingClientRect();
+                if (rect.top <= window.innerHeight - 100 && rect.bottom >= 0) {
+                    setTimeout(() => {
+                        figure.classList.add('show');
+                    }, index * 150); // Stagger animations by 150ms
+                } else {
+                    figure.classList.remove('show'); // Remove class when out of view for continuous animation
+                }
+            });
+        }
+    
+        // Run the check on scroll
+        window.addEventListener('scroll', checkFigures);
+        checkFigures(); // Initial check on load
+    });
+    

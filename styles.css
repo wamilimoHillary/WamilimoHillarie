@@ -6,6 +6,28 @@ body {
     overflow-x: hidden;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+figure {
+    opacity: 0;
+    transform: translateY(50px); /* Initial state for visibility */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+figure.show {
+    animation: fadeInUp 1s ease-out forwards; /* Longer duration */
+}
+
+
 /*all links */
 a{
     text-decoration: none;
