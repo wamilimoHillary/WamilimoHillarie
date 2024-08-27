@@ -102,21 +102,28 @@ document.addEventListener("DOMContentLoaded", function () {
   var figures = document.querySelectorAll('figure');
 
   function checkFigures() {
-    figures.forEach(function (figure, index) {
+    figures.forEach(function (figure) {
       var rect = figure.getBoundingClientRect();
 
-      if (rect.top <= window.innerHeight - 100 && rect.bottom >= 0) {
-        setTimeout(function () {
-          figure.classList.add('show');
-        }, index * 150); // Stagger animations by 150ms
+      if (rect.top <= window.innerHeight - 50 && rect.bottom >= 0) {
+        figure.classList.add('show');
       } else {
-        figure.classList.remove('show'); // Remove class when out of view for continuous animation
+        figure.classList.remove('show');
       }
     });
-  } // Run the check on scroll
+  } // Run the check on scroll and on load
 
 
   window.addEventListener('scroll', checkFigures);
-  checkFigures(); // Initial check on load
+  window.addEventListener('resize', checkFigures); // Handle window resizing
+
+  checkFigures(); // Initial check on page load
+}); //stop header animation
+
+document.addEventListener("DOMContentLoaded", function () {
+  var header = document.querySelector('.header');
+  header.addEventListener('animationend', function () {
+    header.style.animation = 'none'; // Stop the animation
+  });
 });
 //# sourceMappingURL=script.dev.js.map

@@ -5,27 +5,27 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
-
-@keyframes fadeInUp {
+@keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateY(50px); 
+        transform: translateX(-100px); /* Start off-screen to the left */
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0); /* End at the original position */
     }
 }
 
 figure {
     opacity: 0;
-    transform: translateY(50px); /* Initial state for visibility */
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateX(-100px); /* Match the keyframes' initial state */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Fast transition */
 }
 
 figure.show {
-    animation: fadeInUp 1s ease-out forwards; /* Longer duration */
+    animation: slideInLeft 0.3s ease-out forwards; /* A slightly longer animation to make it noticeable */
 }
+
 
 
 /*all links */
@@ -37,23 +37,37 @@ a{
 button:hover,a:hover{
     opacity: 0.5;
 }
-
 .header {
     align-items: center;
-    background: #785353;
+    background: url(images/wamilimo1.jpg) center center no-repeat;
     padding: 1px 20px;
+    background-size: cover;
     position: relative;
     color: #fff;
-    background: url(images/wamilimo1.jpg);
-    background-size: cover;
-    animation: header-background 15s ease-out 4s infinite;
+    animation: header-background 2s ease-out forwards; /* Use 'forwards' to keep the final state */
 }
 
 @keyframes header-background {
-    10%{background:url(images/NIKE.jpg);background-position: 100% 30%; }
-    50%{background:url(images/NIKE.jpg)}
-  
+    0% {
+        background: url(images/wamilimo1.jpg) center center no-repeat;
+        background-size: 0% 100%; /* Start from the center with 0% size */
+    }
+    50% {
+        background: url(images/wamilimo1.jpg) center center no-repeat;
+        background-size: 100% 100%; /* Expand to cover the entire header */
+    }
+    60% {
+        background: url(images/NIKE.jpg) center center no-repeat; /* Change to the new image */
+        background-size: 100% 100%; /* Maintain the full size */
+    }
+    100% {
+        background: url(images/NIKE.jpg) center center no-repeat;
+        background-size: 100% 100%; /* Maintain the full size */
+    }
 }
+
+
+
 
 
 .logo {
@@ -353,7 +367,6 @@ details[open] summary{
     font-size: medium; 
     font-weight: bold;
      font-family: 'Lobster', cursive;
-    
  }
 
  .contents{
@@ -487,7 +500,6 @@ transform: scale(0);
     text-align: left;
     font-size: medium; 
     font-weight: bold;
-     font-family: 'Lobster', cursive;
 }
 
 .close-btn {
@@ -545,9 +557,6 @@ transform: scale(0);
 }
 
 /*DARKMODE STYLES*/
-.dark-mode .header{
-    background-image: url(images/NIKE.jpg);
-}
 
 .dark-mode .nav, .dark-mode footer, .dark-mode .team-section ,
 .dark-mode .why_me, .dark-mode #animation_section {
