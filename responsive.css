@@ -54,7 +54,7 @@
             font-size: small;
         }
 
-    .team-section figure{
+    .team-section figure,.project_section figure{
         flex: 1 1 100%; /* Stack vertically on small screens */
     }
 
@@ -99,9 +99,7 @@
     }
 }
 
-figure {
-    transform: translateX(-50px); /* Adjusted for smaller screens */
-}
+
 }
 
 
@@ -111,6 +109,13 @@ figure {
     .team-section figure,details {
         flex: 1 1 45%; /* Two in a row on tablets */
         margin-bottom: 5rem;
+    }
+
+    .project_section figure{
+        flex: 50%;
+        margin:35px;
+        margin-bottom:6rem;
+      
     }
 
         /*--Animations section*/

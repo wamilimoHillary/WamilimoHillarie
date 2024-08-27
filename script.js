@@ -119,6 +119,7 @@ const menuBtn = document.getElementById('menu-btn');
         window.addEventListener('resize', checkFigures); // Handle window resizing
         checkFigures(); // Initial check on page load
     });
+    
     //stop header animation
     document.addEventListener("DOMContentLoaded", function() {
         const header = document.querySelector('.header');
